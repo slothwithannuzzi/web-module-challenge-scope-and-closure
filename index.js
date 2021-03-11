@@ -81,8 +81,22 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function inning(){
+  return Math.floor(Math.random() * 3 );
+}
+
+function finalScore(inning, num){
+let homeCount = 0;
+let awayCount = 0;
+  for (let i = 1; i <= num; i++) {
+      homeCount += inning();
+      awayCount += inning();
+  }
+const finalScore = {
+    Home: homeCount,
+    Away: awayCount
+}
+return finalScore;
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
